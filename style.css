@@ -117,9 +117,10 @@ header {
 
 /* Hero image styling with shadow and border radius */
 .hero-img {
-  border-radius: 16px;
+  border-radius: 8px;
   max-width: 100%;
-  height: auto;
+  height: 80vh;
+  object-fit: cover;
   box-shadow: 0 10px 30px #E3F6FF;
   background: #E3F6FF;
 }
