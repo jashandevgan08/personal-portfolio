@@ -1,0 +1,313 @@
+/* ===== Reset & Base Styles ===== */
+/* Reset default browser styles and set up base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure full height for layout containers */
+html, body {
+  height: 100%;
+}
+
+/* Base body styles: font, layout direction, background and text color */
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #FFFFFF;
+  color: #181818;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Links ===== */
+/* Basic link styles with smooth hover effect */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Hover effect for links and navigation items */
+a:hover,
+.nav-links li:hover {
+  color: #FF6B00;
+  transform: scale(1.05);
+}
+
+/* ===== Header & Navigation ===== */
+/* Main header layout with sticky positioning for constant visibility */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+/* Navigation list styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 0;
+}
+
+/* Navigation icon styles with hover transition */
+.nav-links i {
+  color: #000;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links i:hover {
+  color: #FF6B00;
+  transform: scale(1.2);
+}
+
+/* ===== Hero Section ===== */
+/* Full-height hero section with centered layout and fade-in animation */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #FFFFFF;
+  min-height: calc(100vh - 120px); /* Account for header/footer */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  padding: 40px 20px;
+}
+
+/* Text container inside hero */
+.hero-text-box {
+  flex: 1 1 500px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Name/title inside hero */
+.name {
+  font-size: 1.8rem;
+}
+
+/* Paragraph styling within hero */
+.hero-text-box p {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Image wrapper in hero section */
+.hero-img-wrapper {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Hero image styling with shadow and border radius */
+.hero-img {
+  border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px #E3F6FF;
+  background: #E3F6FF;
+}
+
+/* ===== Button Styles ===== */
+/* Container for hero buttons */
+.btn-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button group styling */
+.btn {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+/* Individual button anchor styling */
+.btn a {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #FF6B00;
+  border-radius: 8px;
+  color: #FF6B00;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+/* Hover effect for buttons */
+.btn a:hover {
+  background-color: #FF6B00;
+  color: #FFFFFF;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.18);
+}
+
+/* ===== About Me Section ===== */
+/* General about section layout */
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FAF9F6;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Simplified variant of about section */
+.about-simple {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FFFFFF;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Add spacing to separate sections visually */
+.about-me {
+  margin-top: 80px;
+}
+
+/* Headings inside about section */
+.about-me h2,
+.about-text h2 {
+  font-size: 2.5rem;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #2C3E50;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Paragraphs inside about section */
+.about-me p,
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4B4B4B;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Text container in about section */
+.about-text {
+  flex: 1 1 500px;
+  padding: 20px;
+}
+
+/* Decorative line under heading */
+.about-text hr {
+  width: 50px;
+  height: 3px;
+  background-color: #FF6B00;
+  border: none;
+  margin: 10px auto 20px;
+}
+
+/* Image styling in about section */
+.about-image {
+  height: 500px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+
+/* ===== Footer ===== */
+/* Simple footer with small text */
+footer {
+  background-color: #FFFFFF;
+  text-align: center;
+  color: #181818;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* ===== Animations ===== */
+/* Fade-in animation used for sections */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Media Queries ===== */
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text-box,
+  .hero-img-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .about-simple {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+/* Responsive tweaks for small mobile screens */
+@media (max-width: 480px) {
+  .hero-text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text-box p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .btn a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}

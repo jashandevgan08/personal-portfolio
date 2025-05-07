@@ -1,0 +1,509 @@
+/* ===== Reset & Base Styles ===== */
+/* Resets margin, padding, and sets box-sizing to border-box for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Applies base font styles and layout settings to body */
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #FFFFFF;
+  color: #181818;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Links ===== */
+/* Style all anchor links and nav list hover behavior */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+a:hover,
+.nav-links li:hover {
+  color: #FF6B00;
+  transform: scale(1.05);
+}
+
+/* ===== Header & Navigation ===== */
+/* Styles header and navigation bar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+/* Styles nav link list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 0;
+}
+
+/* Style icons inside nav */
+.nav-links i {
+  color: #000;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links i:hover {
+  color: #FF6B00;
+  transform: scale(1.2);
+}
+
+/* ===== Hero Section ===== */
+/* Main hero section with animation and layout */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #FFFFFF;
+  min-height: calc(100vh - 120px);
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  padding: 40px 20px;
+}
+
+/* Text container inside hero */
+.hero-text-box {
+  flex: 1 1 500px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.name {
+  font-size: 1.8rem;
+}
+
+.hero-text-box p {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Image container inside hero */
+.hero-img-wrapper {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-img {
+  border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px #E3F6FF;
+  background: #E3F6FF;
+}
+
+/* ===== Button Styles ===== */
+/* Container for CTA buttons */
+.btn-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button group layout */
+.btn {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+/* Styles for button links */
+.btn a {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #FF6B00;
+  border-radius: 8px;
+  color: #FF6B00;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn a:hover {
+  background-color: #FF6B00;
+  color: #FFFFFF;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.18);
+}
+
+/* ===== About Me Section ===== */
+/* Section layout for About Me */
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FAF9F6;
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-top: 80px;
+}
+
+/* Additional About layout variant */
+.about-simple {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FFFFFF;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Heading and text styles */
+.about-me h2,
+.about-text h2 {
+  font-size: 2.5rem;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #2C3E50;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.about-me p,
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4B4B4B;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Paragraph block styling */
+.about-text {
+  flex: 1 1 500px;
+  padding: 20px;
+}
+
+.about-text hr {
+  width: 50px;
+  height: 3px;
+  background-color: #FF6B00;
+  border: none;
+  margin: 10px auto 20px;
+}
+
+/* Image styling in About section */
+.about-image {
+  height: 500px;
+  width: 100%;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+
+/* ===== Skills Section ===== */
+/* Layout and card style for skill icons */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FFFFFF;
+}
+
+.skills-text-box {
+  margin-top: 100px;
+  flex: 1 1 100%;
+  max-width: 800px;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+.skills p {
+  font-size: 1rem;
+  color: #4B4B4B;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Skill card list layout */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Individual skill item card */
+.skill {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 20px;
+  background-color: #F0F0F0;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill i {
+  font-size: 3rem;
+  color: #FF6B00;
+}
+
+.skill h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.skill p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #4B4B4B;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+}
+
+.projects-text-box {
+  flex: 1 1 100%;
+  max-width: 800px;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+.projects p {
+  font-size: 1rem;
+  color: #4B4B4B;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Container for project cards */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  flex: 1 1 300px;
+  background-color: #F0F0F0;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-info {
+  margin-top: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #4B4B4B;
+}
+
+.project-info a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FF6B00;
+}
+
+.project-info a:hover {
+  color: #FF6B00;
+  transform: scale(1.05);
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #FFFFFF;
+}
+
+.contact-text-box {
+  flex: 1 1 100%;
+  max-width: 800px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: #4B4B4B;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.contact-form {
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #4B4B4B;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #FF6B00;
+  color: #FFF;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #FF4500;
+}
+
+/* ===== Footer ===== */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: #181818;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Media Queries ===== */
+/* Responsive design for tablets and small devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text-box,
+  .hero-img-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .about-simple {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image,
+  .skills-list,
+  .project-list,
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 480px) {
+  .hero-text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text-box p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .btn a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}

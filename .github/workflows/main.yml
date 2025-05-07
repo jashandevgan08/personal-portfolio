@@ -1,0 +1,32 @@
+
+Each card contains a project image, title, and description — ideal for portfolio or personal project displays.
+
+## ✅ How to Use
+
+1. Clone the repo or download the files.
+2. Replace placeholder images (`image1.jpg`, `image2.jpg`) with your own.
+3. Customize titles and descriptions for each project.
+4. Open `index.html` in your browser.
+
+## 📱 Responsiveness
+
+This layout is mobile-friendly. Project cards automatically adjust to fit smaller screens by using flexible widths and vertical stacking.
+
+## ✨ Demo
+
+> Add a link to your GitHub Pages or live site if deployed!
+
+---
+
+## 💡 Future Improvements
+
+- Add hover effects or animations for better interactivity
+- Implement filtering or category sorting
+- Add project links and tech stack badges
+
+---
+
+### 🧑‍💻 Author
+
+Developed by [Your Name Here]. Feel free to contribute or fork for your own project needs.
+
